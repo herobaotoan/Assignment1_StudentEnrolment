@@ -1,10 +1,7 @@
-import java.util.ArrayList;
-
 public class Student {
     private String ID;
     private String name;
     private String birthday;
-    private ArrayList<Course> coursesList;
 
     public Student(String ID, String name, String birthday) {
         this.ID = ID;
@@ -24,15 +21,10 @@ public class Student {
         return birthday;
     }
 
-    public void addCourse(Course course) {
-        coursesList.add(course);
-    }
-
     @java.lang.Override
     public java.lang.String toString() {
         return "Student{" +
-                "ID='" + ID + '\'' +
-                ", name='" + name + '\'' +
-                ", birthday='" + birthday + '\'';
+                 ID + '\'' +
+                 name + '\'';
     }
 }
