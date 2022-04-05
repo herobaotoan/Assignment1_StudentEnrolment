@@ -32,6 +32,7 @@ User has 5 option to choose:
 5.	End program.
 After each option (except 5), user can choose whether to continue or quit.
  
+ 
 Method:
 
 addCourse(String id, String semester, Course course, Boolean firstRun) :
