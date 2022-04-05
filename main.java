@@ -10,7 +10,7 @@ public class main {
 
         //PART 1: POPULATE DATA FROM PROVIDED FILE INTO HASHMAPS.
         //File must in the project folder.
-        System.out.print("Enter file name: ");
+        System.out.print("Enter file name (Or input nothing to read the default file): ");
         Scanner scanner = new Scanner(System.in);
         String fileName = scanner.nextLine();
         if (fileName.equals("")) fileName = "default.csv";
