@@ -103,9 +103,26 @@ public class main {
                         System.out.println("Information about " + s.getName() + " has been written to " + fileName + "!");
                     }
                 }
-                case (2) -> {
-
-                    break;
+                case (2) -> {boolean error2 = true;
+                    do {
+                        System.out.println("Please enter SID of the student you want to delete from enrolment: ");
+                        Scanner idScanner = new Scanner(System.in);
+                        String id = idScanner.nextLine().toUpperCase();
+                        for (String string : enrolmentList.get(0).getStudentList().keySet()) {
+                            if (id.equals(string)) {
+                                //Remove student.
+                                enrolmentList.get(0).getStudentList().remove(id);
+                                for (Student student : students) {
+                                    if (student.getID().equals(id)) {
+                                        System.out.println(student + " is removed from the enrolment!");
+                                    }
+                                }
+                                error2 = false;
+                                break;
+                            }
+                        }
+                        if (error2) System.out.println("No student found! Please try again.");
+                    } while (error2);
                 }
                 case (3) -> {
 
