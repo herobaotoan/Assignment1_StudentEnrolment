@@ -103,7 +103,8 @@ public class main {
                         System.out.println("Information about " + s.getName() + " has been written to " + fileName + "!");
                     }
                 }
-                case (2) -> {boolean error2 = true;
+                case (2) -> { //DELETE OLD STUDENT.
+                    boolean error2 = true;
                     do {
                         System.out.println("Please enter SID of the student you want to delete from enrolment: ");
                         Scanner idScanner = new Scanner(System.in);
