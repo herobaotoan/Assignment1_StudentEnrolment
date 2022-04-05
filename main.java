@@ -125,12 +125,25 @@ public class main {
                         if (error2) System.out.println("No student found! Please try again.");
                     } while (error2);
                 }
-                case (3) -> {
-
-                    break;
-                }
-                case (4) -> {
-                    break;
+                case (3) -> //PRINT OUT ALL.
+                        //Method getAll.
+                        StudentEnrolmentManager.getAllEnrolment(enrolmentList, students);
+                case (4) -> {//PRINT OUT 1 STUDENT.
+                    boolean error4 = true;
+                    do {
+                        System.out.println("Please enter SID of the student you want to delete from enrolment: ");
+                        Scanner idScanner = new Scanner(System.in);
+                        String id = idScanner.nextLine().toUpperCase();
+                        //Method getOne.
+                        StudentEnrolmentManager.getOneEnrolment(enrolmentList, students, id);
+                        for (String string : enrolmentList.get(0).getStudentList().keySet()) {
+                            if (id.equals(string)) {
+                                error4 = false;
+                                break;
+                            }
+                        }
+                        if (error4) System.out.println("No student found! Please try again.");
+                    } while (error4);
                 }
                 case (5) -> //END PROGRAM.
                         Continue = false;
